@@ -1,0 +1,15 @@
+
+ {% extends 'blog/base.html' %}
+
+
+ {% block content %}
+
+   <form method="POST" class="post-form"  enctype="multipart/form-data">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="confirm">confirm</button>
+        <a href= "{% url  'post_list' %}"><input type="button" value="CANCEL"></a>
+       
+    </form>
+   
+ {% endblock %}

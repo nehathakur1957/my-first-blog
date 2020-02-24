@@ -1,0 +1,44 @@
+ {% extends 'blog/base.html' %}
+
+
+ {% block content %}
+ 
+       {#<img src="{% static 'img/wwjpg.jpg' %}"> #}
+
+     <!--    <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div> -->
+
+    	{% for post in page_obj %}
+        <div>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title|upper }}</a></h2>
+            <img src="/media/{{ post.document }}" width="100%">
+            <p>{{ post.published_date }}</p>
+            <p>{{ post.text| safe }}</p>
+        </div>
+        {% endfor %}
+
+
+ {% if page_obj.has_other_pages %}
+  <ul class="pagination  pagination-lg">
+    {% if page_obj.has_previous %}
+      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in page_obj.paginator.page_range %}
+      {% if page_obj.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+ {% endblock %}
