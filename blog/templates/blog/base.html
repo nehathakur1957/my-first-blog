@@ -31,18 +31,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Neha's Blog</a>
+      <a class="navbar-brand" href="neha">Neha's Blog</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">My Blog</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <li><a href="aboutpage">About Me</a></li>
+        <!-- <li><a href="#">My Blog</a></li> -->
+        <li><a href="mailto:tnehathakur1957@hotmail.com">Contact Me</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -56,7 +56,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="http://www.google.com">google</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -79,7 +79,7 @@
                 {% if user.is_authenticated %}
     	  	            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                         <a href="{% url 'logout' %}" class="top-menu">Logout</a>
-                        <a href="{% url 'signup' %}" class="top-menu">Sign In</a>
+                        <!-- <a href="{% url 'signup' %}" class="top-menu">Sign In</a> -->
                 {% else %}
                 <a class="top-menu" href="{% url 'login' %}">Login</a>
                 {% endif %}
@@ -113,12 +113,17 @@
 
 
 
-<div class="page-footer" style="height:80%; background-color:#C25100;">
+<div class="page-footer" style="height:100%; background-color:#C25100;">
   <h1 style="color:white;">Posted by:Neha thakur</h1>
-  <h1 style="color:white;">Contact information: <a href="mailto:tnehathakur1957@hotmail.com">tnehathakur1957@hotmail.com</a></h1>
-  <h1 style="text-align:center;color:white;font-size:50px;">THANKS FOR VISIT</h1>
-  <a style="right;color:white;font-size:20px;" href="http://www.google.com">www.google.com</a>
+  <h1 style="color:white;">Contact information: <a href="mailto:tnehathakur1957@hotmail.com" style="color:black">tnehathakur1957@hotmail.com</a></h1>
+  <h1 style="text-align:center;color:white;font-size:50px;" &#128522;>THANKS FOR VISIT</h1>
+  <!-- <span style='font-size:100px;'>&#128522;</span> -->
+  <!-- <a style="right;color:white;font-size:20px;" href="http://www.google.com">www.google.com</a> -->
 </div>
+
+
+
+
 
 </body>
 </html>
